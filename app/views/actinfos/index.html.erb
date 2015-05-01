@@ -1,0 +1,29 @@
+<h1>Listing actinfos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Money</th>
+      <th>Info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @actinfos.each do |actinfo| %>
+      <tr>
+        <td><%= actinfo.time %></td>
+        <td><%= actinfo.money %></td>
+        <td><%= actinfo.info %></td>
+        <td><%= link_to 'Show', actinfo %></td>
+        <td><%= link_to 'Edit', edit_actinfo_path(actinfo) %></td>
+        <td><%= link_to 'Destroy', actinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Actinfo', new_actinfo_path %>

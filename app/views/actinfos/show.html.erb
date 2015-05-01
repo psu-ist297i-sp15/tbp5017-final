@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @actinfo.time %>
+</p>
+
+<p>
+  <strong>Money:</strong>
+  <%= @actinfo.money %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @actinfo.info %>
+</p>
+
+<%= link_to 'Edit', edit_actinfo_path(@actinfo) %> |
+<%= link_to 'Back', actinfos_path %>
